@@ -5,6 +5,6 @@ The idea was to make a slighty conficurable "knitted" effect with a shader. It w
 
 Screenshots
 ---
-<img src="Screenshots/screenshot01.jpg" width="320px" />&nbsp;
-<img src="Screenshots/screenshot02.jpg" width="320px" />&nbsp;
-<img src="Screenshots/screenshot03.gif" width="320px" />
+<img src="Screenshots/screenshot01.jpg" width="280px" />&nbsp;
+<img src="Screenshots/screenshot02.jpg" width="280px" />&nbsp;
+<img src="Screenshots/screenshot03.gif" width="280px" />
