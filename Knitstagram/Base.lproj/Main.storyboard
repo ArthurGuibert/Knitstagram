@@ -44,7 +44,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="oxV-GG-8g1">
                                 <rect key="frame" x="128" y="579" width="118" height="31"/>
                                 <connections>
-                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qzr-U0-VZT"/>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wJj-Bn-wxa"/>
                                 </connections>
                             </slider>
                         </subviews>

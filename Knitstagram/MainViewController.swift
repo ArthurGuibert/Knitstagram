@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
         self.present(controller, animated: true, completion: nil)
     }
     
-    @IBAction func valueChanged(_ sender: UISlider) {
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
         if let cameraController = self.childViewControllers.first as? ViewController {
             cameraController.changeSize(size: sender.value / 10.0)
         }
