@@ -41,11 +41,20 @@
                                     <segue destination="IP7-BL-zXc" kind="embed" id="rgr-TI-KVh"/>
                                 </connections>
                             </containerView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="oxV-GG-8g1">
+                                <rect key="frame" x="128" y="579" width="118" height="31"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qzr-U0-VZT"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="oxV-GG-8g1" secondAttribute="trailing" constant="115" id="3gh-c6-IXr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3P0-dV-2w8" secondAttribute="bottom" constant="20" id="H2c-eW-2bB"/>
+                            <constraint firstItem="oxV-GG-8g1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="114" id="eqX-c8-02g"/>
                             <constraint firstItem="sxa-eg-cuO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="fZx-9O-dsR"/>
+                            <constraint firstItem="3P0-dV-2w8" firstAttribute="top" secondItem="oxV-GG-8g1" secondAttribute="bottom" constant="8" id="pOj-qt-K3n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sxa-eg-cuO" secondAttribute="trailing" constant="-16" id="rGF-W0-thO"/>
                             <constraint firstItem="sxa-eg-cuO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="xR8-Oz-okP"/>
                             <constraint firstItem="3P0-dV-2w8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z9G-SN-r83"/>

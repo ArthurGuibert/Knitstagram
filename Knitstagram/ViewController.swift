@@ -125,6 +125,10 @@ class ViewController: GLKViewController, AVCaptureVideoDataOutputSampleBufferDel
         CVOpenGLESTextureCacheFlush(capture.textureCache!, 0);
     }
     
+    func changeSize(size: GLfloat) {
+        program.setUniform(name: "u_knot_size", value: size)
+    }
+    
     override func glkView(_ view: GLKView, drawIn rect: CGRect) {
         if textureSize.height != 0 {
             glClear(GLbitfield(GL_COLOR_BUFFER_BIT));

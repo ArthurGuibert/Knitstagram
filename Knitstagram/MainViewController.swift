@@ -28,7 +28,13 @@ class MainViewController: UIViewController {
     
     func share(image: UIImage) {
         let activityItem: [AnyObject] = [image as AnyObject]
-        let avc = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
-        self.present(avc, animated: true, completion: nil)
+        let controller = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func valueChanged(_ sender: UISlider) {
+        if let cameraController = self.childViewControllers.first as? ViewController {
+            cameraController.changeSize(size: sender.value / 10.0)
+        }
     }
 }
