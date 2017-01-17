@@ -100,7 +100,6 @@ class ShaderProgram {
     }
     
     func compile(type: GLenum, shader: inout GLuint, filename: String) -> Bool {
-        var status: GLint = 0
         shader = glCreateShader(type)
         
         var source: UnsafePointer<Int8>
@@ -114,14 +113,30 @@ class ShaderProgram {
         
         glShaderSource(shader, GLsizei(1), &castSource, nil)
         glCompileShader(shader)
-        glGetShaderiv(shader, GLenum(GL_COMPILE_STATUS), &status)
         
-        if status == 0 {
+        if let e = error(for: shader) {
+            print("Shader error:\n\(e)")
             glDeleteShader(shader)
-            return false
         }
         
         return true
+    }
+    
+    func error(for shader: GLuint) -> String? {
+        var status: GLint = 0
+        glGetShaderiv(shader, GLenum(GL_COMPILE_STATUS), &status)
+        
+        if status == 0 {
+            var errorLength: GLint = 0;
+            glGetShaderiv(shader, GLenum(GL_INFO_LOG_LENGTH), &errorLength);
+            
+            var errorTrace = [GLchar](repeating: 0, count: Int(errorLength))
+            glGetShaderInfoLog(shader, errorLength, &errorLength, &errorTrace);
+    
+            return String(cString: errorTrace)
+        }
+
+        return nil
     }
     
     func link(program: GLuint) -> Bool {
@@ -141,6 +156,14 @@ class ShaderProgram {
         
         if uniform != -1 {
             glUniform1f(uniform, value)
+        }
+    }
+    
+    func setUniform(name: String, value: GLKVector2) {
+        let uniform = glGetUniformLocation(program, UnsafePointer<GLchar>(name))
+        
+        if uniform != -1 {
+            glUniform2f(uniform, value.x, value.y)
         }
     }
 }

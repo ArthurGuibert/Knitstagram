@@ -368,6 +368,7 @@
 				8E42D5131E243FF400F0F04A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
