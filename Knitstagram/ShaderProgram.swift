@@ -151,19 +151,12 @@ class ShaderProgram {
         return true;
     }
     
-    func setUniform(name: String, value: GLfloat) {
-        let uniform = glGetUniformLocation(program, UnsafePointer<GLchar>(name))
+    func setUniform<T:Uniformizable>(name: String, value: T) {
+        let uniformLocation = glGetUniformLocation(program, UnsafePointer<GLchar>(name))
         
-        if uniform != -1 {
-            glUniform1f(uniform, value)
+        if uniformLocation != -1 {
+            value.setUniformAtLocation(localtion: uniformLocation)
         }
     }
     
-    func setUniform(name: String, value: GLKVector2) {
-        let uniform = glGetUniformLocation(program, UnsafePointer<GLchar>(name))
-        
-        if uniform != -1 {
-            glUniform2f(uniform, value.x, value.y)
-        }
-    }
 }

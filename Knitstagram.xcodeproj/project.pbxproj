@@ -21,6 +21,7 @@
 		8E42D5211E24403500F0F04A /* TextureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42D51A1E24403500F0F04A /* TextureLoader.swift */; };
 		8E42D5251E24404600F0F04A /* noise.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E42D5231E24404600F0F04A /* noise.png */; };
 		8E42D5261E24404600F0F04A /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E42D5241E24404600F0F04A /* texture.png */; };
+		C17173CA1E4DD13300CFA341 /* Uniformizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17173C91E4DD13300CFA341 /* Uniformizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		8E42D51A1E24403500F0F04A /* TextureLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureLoader.swift; sourceTree = "<group>"; };
 		8E42D5231E24404600F0F04A /* noise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noise.png; path = Resources/noise.png; sourceTree = "<group>"; };
 		8E42D5241E24404600F0F04A /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = texture.png; path = Resources/texture.png; sourceTree = "<group>"; };
+		C17173C91E4DD13300CFA341 /* Uniformizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uniformizable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		8E42D5291E24406000F0F04A /* Rendering */ = {
 			isa = PBXGroup;
 			children = (
+				C17173C91E4DD13300CFA341 /* Uniformizable.swift */,
 				8E42D5151E24403500F0F04A /* Geometry.swift */,
 				8E42D5191E24403500F0F04A /* ShaderProgram.swift */,
 				8E42D51A1E24403500F0F04A /* TextureLoader.swift */,
@@ -205,6 +208,7 @@
 				8E42D5211E24403500F0F04A /* TextureLoader.swift in Sources */,
 				8E42D51C1E24403500F0F04A /* Geometry.swift in Sources */,
 				8E42D5031E243FF400F0F04A /* AppDelegate.swift in Sources */,
+				C17173CA1E4DD13300CFA341 /* Uniformizable.swift in Sources */,
 				8E42D51B1E24403500F0F04A /* CaptureSession.swift in Sources */,
 				8E42D51D1E24403500F0F04A /* MainViewController.swift in Sources */,
 			);
